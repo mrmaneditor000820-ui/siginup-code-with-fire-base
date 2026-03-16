@@ -39,6 +39,7 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+
 function signup(){
 var semail = document.getElementById("semail").value
 var spassword = document.getElementById("spassword").value
