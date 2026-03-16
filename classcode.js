@@ -6,7 +6,7 @@ import {
     createUserWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 const firebaseConfig = {
-    apiKey: process.env.API_KEY,
+    apiKey: "AIzaSyBxWy54p37na-NPWlk4Qs6dVY46_H2wfOw",
     authDomain: "abdurehman-app.firebaseapp.com",
     projectId: "abdurehman-app",
     storageBucket: "abdurehman-app.firebasestorage.app",
@@ -19,7 +19,7 @@ const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
-
+var text = document.getElementById("text")
 
 // action
 var signupbtn = document.getElementById("signupbtn")
@@ -33,11 +33,13 @@ createUserWithEmailAndPassword(auth, semail, spassword)
   .then((userCredential) => {
 
     const user = userCredential.user;
+    text.innerHTML = user.email + " is created successfully"
 
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
+    console.log(errorMessage)
 
   });
 }
