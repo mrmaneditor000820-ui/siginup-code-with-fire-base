@@ -3,7 +3,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
 import {
     getAuth,
-    createUserWithEmailAndPassword
+    createUserWithEmailAndPassword,
+    onAuthStateChanged 
 } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 const firebaseConfig = {
     apiKey: "AIzaSyBxWy54p37na-NPWlk4Qs6dVY46_H2wfOw",
@@ -25,6 +26,18 @@ var text = document.getElementById("text")
 var signupbtn = document.getElementById("signupbtn")
 signupbtn.addEventListener("click",signup)
 
+// check user state
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+       text.innerHTML = user.email + " is created successfully"
+
+    const uid = user.uid;
+
+  } else {
+   
+  }
+});
 
 function signup(){
 var semail = document.getElementById("semail").value
