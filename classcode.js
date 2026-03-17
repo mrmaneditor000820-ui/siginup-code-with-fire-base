@@ -4,7 +4,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/fireba
 import {
     getAuth,
     createUserWithEmailAndPassword,
-    onAuthStateChanged 
+    onAuthStateChanged,
+    signInWithEmailAndPassword 
 } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 const firebaseConfig = {
     apiKey: "AIzaSyBxWy54p37na-NPWlk4Qs6dVY46_H2wfOw",
