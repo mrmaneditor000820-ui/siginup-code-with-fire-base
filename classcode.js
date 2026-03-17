@@ -27,6 +27,8 @@ var text = document.getElementById("text")
 var signupbtn = document.getElementById("signupbtn")
 signupbtn.addEventListener("click",signup)
 
+var loginbtn = document.getElementById("loginbtn")
+loginbtn.addEventListener("click",login)
 // check user state
 
 onAuthStateChanged(auth, (user) => {
@@ -59,3 +61,20 @@ createUserWithEmailAndPassword(auth, semail, spassword)
   });
 }
 
+function signup(){
+var semail = document.getElementById("semail").value
+var spassword = document.getElementById("spassword").value
+createUserWithEmailAndPassword(auth, semail, spassword)
+  .then((userCredential) => {
+
+    const user = userCredential.user;
+    text.innerHTML = user.email + " is created successfully"
+
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorMessage)
+
+  });
+}
