@@ -35,6 +35,13 @@ loginbtn.addEventListener("click",login)
 var logoutbtn = document.getElementById("logoutbtn")
 logoutbtn.addEventListener("click",logout)
 
+function logout(){
+  signOut(auth).then(() => {
+  // Sign-out successful.
+}).catch((error) => {
+  // An error happened.
+});
+}
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
