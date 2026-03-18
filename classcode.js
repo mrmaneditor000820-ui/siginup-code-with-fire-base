@@ -69,6 +69,7 @@ signInWithEmailAndPassword(auth, lemail, lpassword)
 
     const user = userCredential.user;
     text.innerHTML = user.email + " is logged in successfully"
+    text.style.color = "green"
 
   })
   .catch((error) => {
