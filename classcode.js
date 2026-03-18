@@ -37,9 +37,10 @@ logoutbtn.addEventListener("click",logout)
 
 function logout(){
   signOut(auth).then(() => {
-  // Sign-out successful.
+  alert("user is logged out")
+  text.innerText = ""
 }).catch((error) => {
-  // An error happened.
+  alert("error in logging out")
 });
 }
 
