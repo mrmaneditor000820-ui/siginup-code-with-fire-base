@@ -5,7 +5,8 @@ import {
     getAuth,
     createUserWithEmailAndPassword,
     onAuthStateChanged,
-    signInWithEmailAndPassword 
+    signInWithEmailAndPassword,
+    signOut 
 } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 const firebaseConfig = {
     apiKey: "AIzaSyBxWy54p37na-NPWlk4Qs6dVY46_H2wfOw",
@@ -30,6 +31,10 @@ signupbtn.addEventListener("click",signup)
 var loginbtn = document.getElementById("loginbtn")
 loginbtn.addEventListener("click",login)
 // check user state
+
+var logoutbtn = document.getElementById("logoutbtn")
+logoutbtn.addEventListener("click",logout)
+
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
