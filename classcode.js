@@ -61,14 +61,14 @@ createUserWithEmailAndPassword(auth, semail, spassword)
   });
 }
 
-function signup(){
-var semail = document.getElementById("semail").value
-var spassword = document.getElementById("spassword").value
-createUserWithEmailAndPassword(auth, semail, spassword)
+function login(){
+var lemail = document.getElementById("lemail").value
+var lpassword = document.getElementById("lpassword").value
+signInWithEmailAndPassword(auth, lemail, lpassword)
   .then((userCredential) => {
 
     const user = userCredential.user;
-    text.innerHTML = user.email + " is created successfully"
+    text.innerHTML = user.email + " is logged in successfully"
 
   })
   .catch((error) => {
@@ -78,3 +78,5 @@ createUserWithEmailAndPassword(auth, semail, spassword)
 
   });
 }
+
+
