@@ -75,6 +75,8 @@ signInWithEmailAndPassword(auth, lemail, lpassword)
     const errorCode = error.code;
     const errorMessage = error.message;
     console.log(errorMessage)
+    text.innerText = errorCode
+    text.style.color = "red"
 
   });
 }
