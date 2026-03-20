@@ -75,21 +75,115 @@ button:hover {
     font-size: 16px;
 }
 
-/* from contact page styling */
-.container {
-    background: white;
-    padding: 30px;
-    width: 350px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+// style.css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 10px;
-    color: #333;
+body {
+  background: linear-gradient(135deg, #eef2f7, #dfe9f3);
 }
-h2 {
-    margin-top: 20px;
-    color: #555;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: #111;
+  color: #fff;
 }
+
+.navbar a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.navbar .active {
+  border-bottom: 2px solid #00bcd4;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.contact-info {
+  background: #111;
+  color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.contact-info h2 {
+  margin-bottom: 15px;
+}
+
+.info-box p {
+  margin: 10px 0;
+  opacity: 0.9;
+}
+
+.contact-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00bcd4;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #00bcd4;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #0097a7;
+}
+
+#status {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+
+
